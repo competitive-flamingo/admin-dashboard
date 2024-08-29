@@ -1,0 +1,147 @@
+/* FONTS */
+@font-face {
+    font-family: 'robotoregular';
+    src: url('./fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('./fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* CSS RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+
+/* PROJECT */
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+  }
+  
+img {
+width: 10%;
+}
+
+a {
+font-size: 1rem;
+}
+
+.sidebar a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.dashboard img {
+width: 4rem;
+}
+
+.dashboard p {
+font-size: 2rem;
+}
+
+.sidebar {
+font-weight: bold;
+color: #fff;
+padding: 0 20px;
+/* flex-basis: clamp(200px, 17%, 300px); */
+flex-basis: 360px;
+background-color: #1992d4;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 60px;
+grid-auto-rows: 60px;
+justify-items:baseline;
+grid-template-areas: 
+    "dashboard"
+    "dashboard"
+    "."
+    "home"
+    "profile"
+    "message"
+    "history"
+    "tasks"
+    "communities"
+    "."
+    "settings"
+    "support"
+    "privacy"
+}
+
+.sidebar > div {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 10px;
+}
+
+.sidebar > div:not(.dashboard) {
+    gap: calc(1rem + 10px);
+    padding-left: 1rem;
+}
+
+.dashboard {
+grid-area: dashboard;
+}
+
+.home {
+grid-area: home;
+}
+
+.profile {
+grid-area: profile;
+}
+
+.message {
+grid-area: message;
+}
+
+.history {
+grid-area: history;
+}
+
+.tasks {
+grid-area: tasks;
+}
+
+.communities {
+grid-area: communities;
+}
+
+.settings {
+grid-area: settings;
+}
+
+.support {
+grid-area: support;
+}
+
+.privacy {
+grid-area: privacy;
+}
+  
