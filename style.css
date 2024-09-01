@@ -33,18 +33,22 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 /* PROJECT */
+
+body, html {
+    height: 100%;
+}
+
 body {
-    height: 100vh;
     font-family: sans-serif;
     display: flex;
   }
   
 img {
-width: 10%;
+    width: 2rem;
 }
 
 a {
-font-size: 1rem;
+    font-size: 1rem;
 }
 
 .sidebar a {
@@ -58,46 +62,47 @@ font-size: 1rem;
 }
 
 .dashboard img {
-width: 4rem;
+    width: 4rem;
 }
 
 .dashboard p {
-font-size: 2rem;
+    font-size: 2rem;
 }
 
 .sidebar {
-font-weight: bold;
-color: #fff;
-padding: 0 20px;
-/* flex-basis: clamp(200px, 17%, 300px); */
-flex-basis: 360px;
-background-color: #1992d4;
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 60px;
-grid-auto-rows: 60px;
-justify-items:baseline;
-grid-template-areas: 
-    "dashboard"
-    "dashboard"
-    "."
-    "home"
-    "profile"
-    "message"
-    "history"
-    "tasks"
-    "communities"
-    "."
-    "settings"
-    "support"
-    "privacy"
+    font-weight: bold;
+    color: #fff;
+    padding: 0 20px;
+    /* flex-basis: clamp(200px, 17%, 300px); */
+    flex-basis: 360px;
+    min-width: fit-content;
+    background-color: #1992d4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px;
+    grid-auto-rows: 70px;
+    justify-items:baseline;
+    grid-template-areas: 
+        "dashboard"
+        "dashboard"
+        "."
+        "home"
+        "profile"
+        "message"
+        "history"
+        "tasks"
+        "communities"
+        "."
+        "settings"
+        "support"
+        "privacy"
 }
 
 .sidebar > div {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
 
 .sidebar > div:not(.dashboard) {
@@ -106,42 +111,148 @@ gap: 10px;
 }
 
 .dashboard {
-grid-area: dashboard;
+    grid-area: dashboard;
 }
 
 .home {
-grid-area: home;
+    grid-area: home;
 }
 
 .profile {
-grid-area: profile;
+    grid-area: profile;
 }
 
 .message {
-grid-area: message;
+    grid-area: message;
 }
 
 .history {
-grid-area: history;
+    grid-area: history;
 }
 
 .tasks {
-grid-area: tasks;
+    grid-area: tasks;
 }
 
 .communities {
-grid-area: communities;
+    grid-area: communities;
 }
 
 .settings {
-grid-area: settings;
+    grid-area: settings;
 }
 
 .support {
-grid-area: support;
+    grid-area: support;
 }
 
 .privacy {
-grid-area: privacy;
+    grid-area: privacy;
 }
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .header {
+    margin-bottom: 10px;
+    padding: 0 50px 3px;
+    flex-basis: 20%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 0 2px 25px 1px #afb3b9;
+}
+
+.main .header > * {
+    align-self: center;
+}
+
+input {
+    appearance: none;
+    border: 0;
+    outline: none;
+}
+
+.header .search-icon {
+    width: 2rem;
+    height: auto;
+}
+
+.header .bar {
+    padding: 2px 10px 2px 20px;
+    font-size: 18px;
+    width: 80%;
+    height: auto;
+    background-color: #e2e8f0;
+    border-radius: 20px;
+}
+
+.search {
+    display: flex;
+    gap: 2rem;
+}
+
+.bell-icon {
+    justify-self: end;
+}
+
+.profile-pic {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50px;
+    background-image: url("./images/profile-pic.jpeg");
+    background-size: cover;
+    background-position: center center;
+    justify-self: center;
+}
+
+.user-header .profile-pic {
+    width: 7rem;
+    height: 7rem;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-self: start;
+}
+
+button {
+    padding: 10px 30px;
+    cursor: pointer;
+    appearance: none;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    background-color: #1992d4;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    justify-self: center;
+}
+
+.username,
+.user-header {
+    font-weight: bold;
+}
+
+.username {
+    font-size: 1.1rem;
+}
+
+.user-header .username {
+    font-size: 1.5rem;
+}
+
+.main .content {
+    flex: 1;
+    background-color: #e2e8f0;
+}
+
+
+
   
