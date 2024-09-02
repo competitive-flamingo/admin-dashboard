@@ -164,6 +164,7 @@ a {
     grid-template-columns: 5fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     box-shadow: 0 2px 25px 1px #afb3b9;
+    gap: 10px;
 }
 
 .main .header > * {
@@ -212,6 +213,7 @@ input {
 .user-header .profile-pic {
     width: 7rem;
     height: 7rem;
+    flex-shrink: 0;
 }
 
 .user-header {
